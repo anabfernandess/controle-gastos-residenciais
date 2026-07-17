@@ -1,0 +1,114 @@
+@ControleGastos_Api_HostAddress = http://localhost:5001
+
+### Criar pessoa
+POST {{ControleGastos_Api_HostAddress}}/api/Pessoas
+Content-Type: application/json
+
+{
+  "nome": "Bia",
+  "idade": 29
+}
+
+### Listar pessoas
+GET {{ControleGastos_Api_HostAddress}}/api/Pessoas
+Accept: application/json
+
+### Excluir pessoa
+DELETE {{ControleGastos_Api_HostAddress}}/api/Pessoas/1
+
+### Criar transação de despesa
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Conta de luz",
+  "valor": 180.50,
+  "tipo": "despesa",
+  "pessoaId": 2
+}
+
+### Criar transação de receita
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Salário",
+  "valor": 3500,
+  "tipo": "receita",
+  "pessoaId": 2
+}
+
+### Listar transações
+GET {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Accept: application/json
+
+### Testar receita para menor de idade
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Material Escolar",
+  "valor": 90,
+  "tipo": "despesa",
+  "pessoaId": 3
+}
+### Criar pessoa menor de idade
+POST {{ControleGastos_Api_HostAddress}}/api/Pessoas
+Content-Type: application/json
+
+{
+  "nome": "Lucas",
+  "idade": 16
+}
+
+### Receita para menor — deve ser recusada
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Mesada",
+  "valor": 200,
+  "tipo": "receita",
+  "pessoaId": 3
+}
+
+### Despesa para menor — deve ser aceita
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Material escolar",
+  "valor": 90,
+  "tipo": "despesa",
+  "pessoaId": 3
+}
+
+### Consultar totais
+GET {{ControleGastos_Api_HostAddress}}/api/totais
+Accept: application/json
+
+### Criar pessoa para testar exclusão
+POST {{ControleGastos_Api_HostAddress}}/api/Pessoas
+Content-Type: application/json
+
+{
+  "nome": "Pessoa Teste",
+  "idade": 30
+}
+
+### Criar transação para testar exclusão
+POST {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Transação temporária",
+  "valor": 100,
+  "tipo": "despesa",
+  "pessoaId": 6
+}
+### Excluir pessoa e suas transações
+DELETE {{ControleGastos_Api_HostAddress}}/api/Pessoas/6
+
+### Conferir exclusão em cascata
+GET {{ControleGastos_Api_HostAddress}}/api/Transacoes
+Accept: application/json

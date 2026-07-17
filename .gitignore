@@ -1,0 +1,27 @@
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Configurações locais
+.vs/
+.vscode/
+
+# Banco local
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# Arquivos de usuário
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Front-end
+**/node_modules/
+**/dist/
+
+# Variáveis de ambiente
+.env
+.env.*
