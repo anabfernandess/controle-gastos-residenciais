@@ -11,7 +11,7 @@ Sistema para gerenciamento de pessoas, transações financeiras e consulta de to
 - Entity Framework Core
 - SQLite
 
-### Front-end
+### Front-end (Em desenvolvimento)
 - React
 - TypeScript
 
