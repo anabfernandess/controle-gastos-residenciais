@@ -1,0 +1,23 @@
+.swal2-popup {
+  border-radius: 16px !important;
+  background: #1e1e2f !important;
+  color: #ffffff !important;
+}
+
+.swal2-title {
+  color: #ffffff !important;
+}
+
+.swal2-html-container {
+  color: #cfcfcf !important;
+}
+
+.swal2-confirm {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+.swal2-cancel {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
