@@ -17,7 +17,6 @@ Sistema web para gerenciamento financeiro de uma residência, permitindo o cadas
 
 ## 📸 Preview
 
-> *(Adicione aqui prints da aplicação após a entrega.)*
 
 | Dashboard | Pessoas |
 |-----------|----------|
